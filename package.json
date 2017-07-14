@@ -1,0 +1,16 @@
+{
+  "name": "gatsby-serverless-mongodb-rest-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "api": "cd api && sls offline --skipCacheInvalidation",
+    "ui": "cd ui && gatsby develop",
+    "mongo:start": "docker run --name mongo -p 27017:27017 -d mongo mongod",
+    "mongo:stop": "docker rm mongo -f",
+    "create:comp": ". ui/scripts/create_component.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

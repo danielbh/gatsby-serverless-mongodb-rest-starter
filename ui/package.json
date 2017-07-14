@@ -1,0 +1,22 @@
+{
+  "name": "gatsby-ui-serverless",
+  "description": "UI Boilerplate for a serverless app with mongoDB persistence",
+  "version": "0.0.1",
+  "author": "Daniel Hollcraft",
+  "dependencies": {
+    "gatsby": "^1.0.1",
+    "gatsby-link": "^1.0.1",
+    "gatsby-plugin-react-helmet": "^1.0.1",
+    "react-bootstrap": "^0.31.1"
+  },
+  "devDependencies": {},
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"pages/*.js\" \"utils/*.js\" \"wrappers/*.js\" \"html.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
