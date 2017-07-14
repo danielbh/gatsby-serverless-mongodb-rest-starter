@@ -10,6 +10,6 @@ fi
 mkdir ui/src/components/$1
 touch ui/src/components/$1/index.js
 touch ui/src/components/$1/style.css
-touch ui/src/components/$1/index.test.js
+touch ui/src/components/$1/index.spec.js
 
 

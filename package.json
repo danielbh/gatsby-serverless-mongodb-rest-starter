@@ -12,5 +12,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  }
 }

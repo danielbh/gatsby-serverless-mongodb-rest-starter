@@ -39,5 +39,13 @@ functions:
           method: get
           cors: true
 
+  posts:
+      handler: handler.posts
+      events:
+        - http:
+            path: posts/{limit}
+            method: get
+            cors: true
+
 plugins:
   - serverless-offline

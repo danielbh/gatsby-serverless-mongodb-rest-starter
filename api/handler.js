@@ -29,6 +29,27 @@ module.exports.post = (event, context, callback) => {
   });
 };
 
+module.exports.posts = (event, context, callback) => {
+  const db = mongoose.connect(mongoString).connection;
+  const limit = event.pathParameters.limit;
+
+  if (!validator.isAlphanumeric(limit)) throw Error('Invalid limit');
+
+  db.once('open', () => {
+    PostModel
+      .find().limit(parseInt(limit))
+      .then((post) => {
+        callback(null, { statusCode: 200, body: JSON.stringify(post) });
+      })
+      .catch((err) => {
+        callback(err);
+      })
+      .finally(() => {
+        // Close db connection or node event loop won't exit , and lambda will timeout
+        db.close();
+      });
+  });
+};
 
 module.exports.createPost = (event, context, callback) => {
   let db = {};
