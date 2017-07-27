@@ -8,12 +8,14 @@
     "ui": "cd ui && gatsby develop",
     "mongo:start": "docker run --name mongo -p 27017:27017 -d mongo mongod",
     "mongo:stop": "docker rm mongo -f",
+    "dev": ". scripts/run_dev.sh",
     "create:comp": ". ui/scripts/create_component.sh"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "concurrently": "^3.5.0",
     "isomorphic-fetch": "^2.2.1"
   }
 }

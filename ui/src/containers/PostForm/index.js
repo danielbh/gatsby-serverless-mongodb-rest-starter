@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Helmet from 'react-helmet'
 
-import { AlertList } from 'react-bs-notifier';
+// import { AlertList } from 'react-bs-notifier';
 
 import {
   Grid,
