@@ -8,7 +8,7 @@ import "isomorphic-fetch"
 const Template = (props) => (
   <div>
     <Helmet
-      title="Gatsby Default Starter"
+      title="Mongo Serverless Gatsby Starter"
       meta={[
         { name: "description", content: "Sample" },
         { name: "keywords", content: "sample, something" },

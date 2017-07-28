@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types'
 import {Grid, Col, Well} from 'react-bootstrap'
 import Post from '../../components/Post/index'
-import Posts from '../../api/Posts'
+import {fetchPosts} from '../../actions'
 
 class PostFeed extends Component {
 
@@ -11,7 +11,7 @@ class PostFeed extends Component {
   };
 
   componentDidMount() {
-    Posts.find().then((posts) => {
+    fetchPosts().then((posts) => {
       this.setState({posts})
     })
   }

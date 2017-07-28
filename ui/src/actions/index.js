@@ -5,7 +5,7 @@
 const apiEndpoint =
   process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3000';
 
-function find(limit=20) {
+function fetchPosts(limit=20) {
   return fetch(apiEndpoint + '/posts/' + limit, {
     method: "GET",
     body: limit,
@@ -19,19 +19,19 @@ function find(limit=20) {
   });
 }
 
-function findOne(id) {}
+function fetchPost(id) {}
 
-function create(title, body) {}
+function createPost(title, body) {}
 
-function update(id) {}
+function updatePost(id) {}
 
-function remove(id) {}
+function removePost(id) {}
 
 
-export default {
-  findOne,
-  find,
-  create,
-  update,
-  remove
+export  {
+  fetchPost,
+  fetchPosts,
+  createPost,
+  updatePost,
+  removePost
 }

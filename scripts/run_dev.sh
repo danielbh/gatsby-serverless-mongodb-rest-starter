@@ -8,3 +8,5 @@ fi
 concurrently "npm run mongo:start" "npm run api" "npm run ui"
 
 
+trap "echo Terminating MongoDB container..." DEBUG
+docker rm mongo -f
